@@ -1,2 +1,3 @@
-# mucit-evreni-comprehensive-educational-platform-for-children
-Exported from Caffeine project: Add copy-to-clipboard button for Student Number in Student Profile
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

@@ -1,0 +1,54 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-05T22:09:22.268Z",
+  "summary": "ProfileSettings.tsx appears to add copy-to-clipboard logic for the student number (including removing spaces before copying) and introduces a success toast state; however, the diff is truncated so accessibility (aria-label/keyboard) and explicit error feedback cannot be verified. There are also unrelated changes/files added outside the requested copy-to-clipboard scope.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "If the Clipboard API is unavailable or the copy operation fails, the UI shows an error feedback state/message rather than failing silently.",
+      "reason": "The copy handler is truncated right after starting a success toast; no evidence is shown for a catch branch or UI error feedback when clipboard is unavailable/fails.",
+      "evidence": [
+        "frontend/src/pages/ProfileSettings.tsx (truncated at toast.success...)"
+      ]
+    },
+    {
+      "id": "REQ-1",
+      "requirement": "The copy control is keyboard-accessible and includes an accessible label (e.g., aria-label=\"Copy student number\").",
+      "reason": "The diff excerpt does not include the rendered JSX for the copy icon/button or any aria-label attributes, so accessibility and keyboard support cannot be confirmed from the provided diff summary.",
+      "evidence": [
+        "frontend/src/pages/ProfileSettings.tsx (truncated; no JSX for copy control shown)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added project_state.json containing unrelated i18n/full-UI language change requests and architectural notes.",
+      "reason": "BuildRequest explicitly constrains the change to copy-to-clipboard UI/logic and says not to introduce unrelated i18n refactors; this added meta file introduces i18n-related content not requested.",
+      "evidence": [
+        "project_state.json"
+      ]
+    },
+    {
+      "description": "Modified Internet Identity hook implementation (useInternetIdentity.ts).",
+      "reason": "No changes to authentication/internet identity were requested; the request is limited to adding copy-to-clipboard control on ProfileSettings.",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts"
+      ]
+    },
+    {
+      "description": "Updated/added broad frontend file summaries describing extensive app features (offline-online sync, routing, activity lists, etc.).",
+      "reason": "These changes are unrelated to the specific requested copy-to-clipboard functionality and exceed the requested scope constraints.",
+      "evidence": [
+        "frontend-file-summaries.txt"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/pages/ProfileSettings.tsx",
+    "project_state.json"
+  ]
+}

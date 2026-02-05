@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="theme-color" content="#4c1d95" />
+        <meta name="application-name" content="Mucit Evreni" />
+        <meta name="apple-mobile-web-app-title" content="Mucit Evreni" />
+        <meta name="description" content="Mucit Evreni - Çocuklar için eğitici platform" />
+        <meta name="author" content="Mucit Evreni" />
+        
+        <!-- Android WebView Optimization -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        
+        <!-- SEO and Crawler Support -->
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://mucitevreni.ic0.app/" />
+        
+        <!-- Privacy Policy Page Meta Tags -->
+        <meta property="og:title" content="Mucit Evreni - Gizlilik Politikası" />
+        <meta property="og:description" content="Mucit Evreni gizlilik politikası ve kullanıcı verilerinin korunması hakkında bilgiler." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mucitevreni.ic0.app/gizlilik" />
+        
+        <title>Mucit Evreni</title>
+        
+        <!-- Web App Manifest -->
+        <link rel="manifest" href="/manifest.json" />
+        
+        <style>
+            /* Prevent text selection and callouts in WebView */
+            * {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            /* Allow text selection in input fields */
+            input, textarea {
+                -webkit-user-select: text;
+                -khtml-user-select: text;
+                -moz-user-select: text;
+                -ms-user-select: text;
+                user-select: text;
+            }
+            
+            /* Prevent pull-to-refresh */
+            body {
+                overscroll-behavior-y: contain;
+            }
+            
+            /* Loading state for privacy policy */
+            #privacy-loading {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, #312e81 0%, #7e22ce 50%, #db2777 100%);
+                z-index: 9999;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-family: system-ui, -apple-system, sans-serif;
+                font-size: 1.5rem;
+                text-align: center;
+                padding: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Privacy Policy Loading Indicator -->
+        <div id="privacy-loading">
+            <div>
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+                <div>Gizlilik Politikası Yükleniyor...</div>
+            </div>
+        </div>
+        
+        <div id="root"></div>
+        
+        <script>
+            // Enhanced routing handler for /gizlilik path
+            // Supports both direct path access and hash-based routing
+            (function() {
+                var path = window.location.pathname;
+                var hash = window.location.hash;
+                
+                // Check if accessing privacy policy via direct path
+                if (path === '/gizlilik' || path === '/gizlilik/' || 
+                    path.endsWith('/gizlilik') || path.endsWith('/gizlilik/')) {
+                    
+                    // Show loading indicator for better UX
+                    var loadingEl = document.getElementById('privacy-loading');
+                    if (loadingEl) {
+                        loadingEl.style.display = 'flex';
+                    }
+                    
+                    // Set hash for SPA routing compatibility
+                    // This ensures the React app knows to render the privacy policy
+                    if (hash !== '#/gizlilik') {
+                        window.location.hash = '#/gizlilik';
+                    }
+                    
+                    // Update document title for SEO
+                    document.title = 'Gizlilik Politikası - Mucit Evreni';
+                }
+                
+                // Listen for hash changes to hide loading indicator
+                window.addEventListener('hashchange', function() {
+                    var loadingEl = document.getElementById('privacy-loading');
+                    if (loadingEl && window.location.hash === '#/gizlilik') {
+                        setTimeout(function() {
+                            loadingEl.style.display = 'none';
+                        }, 100);
+                    }
+                });
+            })();
+        </script>
+        
+        <script type="module" src="/src/main.tsx"></script>
+    </body>
+</html>

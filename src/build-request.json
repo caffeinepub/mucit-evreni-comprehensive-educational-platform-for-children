@@ -1,0 +1,42 @@
+{
+  "kind": "build_request",
+  "title": "Add copy-to-clipboard button for Student Number in Student Profile",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "In the Student Profile / Profile Settings screen, add a copy-to-clipboard control next to the displayed student number so the user can copy the raw (unformatted) student number to the system clipboard.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1",
+          "msg-2"
+        ],
+        "quotes": [
+          "Öğrenci profiline girince profil kısmındaki öğrenci numarasını koplayama kısmı olsun",
+          "yeniden dene"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On the Profile Settings page (frontend/src/pages/ProfileSettings.tsx), the student number section shows a clickable copy icon/button adjacent to the student number display.",
+        "Clicking the copy control copies the unformatted studentNumber value (no spaces) to the clipboard.",
+        "If the Clipboard API is unavailable or the copy operation fails, the UI shows an error feedback state/message rather than failing silently.",
+        "After a successful copy, the UI provides a clear success feedback (e.g., toast or temporary label change) without navigating away from the page.",
+        "The copy control is keyboard-accessible and includes an accessible label (e.g., aria-label=\"Copy student number\")."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/components/ui (read-only).",
+    "Keep changes limited to adding the copy-to-clipboard UI/logic; do not introduce unrelated i18n refactors in this change."
+  ],
+  "nonGoals": [
+    "Implementing full-app internationalization (i18n) for all UI text.",
+    "Changing how student numbers are generated or persisted.",
+    "Adding backend endpoints or storage changes for student numbers."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

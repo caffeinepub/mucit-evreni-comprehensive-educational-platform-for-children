@@ -1,0 +1,27 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-in-the-student-profile-profile-settings-screen-add-a-copy-to-clipboard-control-next-to-the-displayed-student-number-so-the-user-can-copy-the-raw-unformatted-student-number-to-the-system-clipboard",
+      "featureTitle": "In the Student Profile / Profile Settings screen, add a copy-to-clipboard control next to the displayed student number so the user can copy the raw (unformatted) student number to the system clipboard.",
+      "files": [
+        "frontend/src/pages/ProfileSettings.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "camera@1.0.0",
+        "authorization@3.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "http-outcalls@3.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [
+    "Çok dilli destek (i18n) yalnızca üst bar ile sınırlı kalmayacak; tüm UI metinleri i18n anahtarları üzerinden yönetilecek."
+  ],
+  "known_issues": [
+    "Otomatik uygulama oluşturma/build adımı, kapsamlı i18n dönüşümü ve/veya öğrenci numarası yanına kopyala butonu ekleme denemelerinde başarısız olabiliyor (generation/build error)."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-in-the-student-profile-profile-settings-screen-add-a-copy-to-clipboard-control-next-to-the-displayed-student-number-so-the-user-can-copy-the-raw-unformatted-student-number-to-the-system-clipboard",
+      "title": "In the Student Profile / Profile Settings screen, add a copy-to-clipboard control next to the displayed student number so the user can copy the raw (unformatted) student number to the system clipboard.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Dil değiştiğinde sadece üst bar değil, tüm UI metinleri seçilen dile geçsin (tam kapsamlı i18n).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Öğrenci profilinde öğrenci numarasının yanında 'kopyala' (ikon/buton) ile panoya kopyalama özelliği eklensin.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Add copy-to-clipboard button for Student Number in Student Profile",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

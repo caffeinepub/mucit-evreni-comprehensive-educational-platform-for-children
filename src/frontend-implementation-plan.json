@@ -1,0 +1,25 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add copy-to-clipboard button for student number on Profile Settings",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add a keyboard-accessible copy-to-clipboard control next to the displayed student number on Profile Settings with success/error feedback.",
+      "acceptanceCriteria": [
+        "On the Profile Settings page (frontend/src/pages/ProfileSettings.tsx), the student number section shows a clickable copy icon/button adjacent to the student number display.",
+        "Clicking the copy control copies the unformatted studentNumber value (no spaces) to the clipboard.",
+        "If the Clipboard API is unavailable or the copy operation fails, the UI shows an error feedback state/message rather than failing silently.",
+        "After a successful copy, the UI provides a clear success feedback (e.g., toast or temporary label change) without navigating away from the page.",
+        "The copy control is keyboard-accessible and includes an accessible label (e.g., aria-label=\"Copy student number\")."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProfileSettings.tsx",
+          "operation": "modify",
+          "description": "Add a copy icon/button adjacent to the rendered student number, and implement copy-to-clipboard logic that copies the raw studentNumber (strip spaces) using the Clipboard API with a safe fallback (e.g., selection-based copy). Show success and error feedback (e.g., via existing toast system or an inline temporary label) and ensure accessibility via a real <button>, keyboard operability, and an aria-label."
+        }
+      ]
+    }
+  ]
+}
