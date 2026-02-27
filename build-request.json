@@ -1,0 +1,45 @@
+{
+  "kind": "build_request",
+  "title": "Add app-ads.txt to frontend public folder for Google AdMob verification",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "text": "Create the file `frontend/public/app-ads.txt` with the content `google.com, pub-7936595519986908, DIRECT, f08c47fec0942fa0` so that it is served at the root URL path (e.g., `https://mucitevreni-iii.caffeine.xyz/app-ads.txt`) and accessible to Google AdMob for publisher verification.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-8",
+          "msg-9",
+          "msg-10"
+        ],
+        "quotes": [
+          "benim için app-ads.txt uzantısını hazırla normal uygulamanın URL sinin uzantısına",
+          "google.com, pub-7936595519986908, DIRECT, f08c47fec0942fa0",
+          "oluştur"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The file `frontend/public/app-ads.txt` exists in the project.",
+        "The file contains exactly one line: `google.com, pub-7936595519986908, DIRECT, f08c47fec0942fa0`",
+        "The file is accessible at `https://mucitevreni-iii.caffeine.xyz/app-ads.txt` after deployment.",
+        "No other files are modified as part of this change."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any backend files.",
+    "Do not modify any existing frontend source files.",
+    "The app-ads.txt file must be placed in `frontend/public/` so it is served as a static asset at the root path."
+  ],
+  "nonGoals": [
+    "Adding any UI element or indicator related to app-ads.txt.",
+    "Modifying AdMob configuration or publisher ID.",
+    "Any i18n changes.",
+    "Any student number copy-to-clipboard changes."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

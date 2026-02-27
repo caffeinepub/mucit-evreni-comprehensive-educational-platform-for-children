@@ -1,0 +1,27 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-the-file-frontend-public-app-ads-txt-with-the-content-google-com-pub-7936595519986908-direct-f08c47fec0942fa0-so-that-it-is-served-at-the-root-url-path-e-g-https-mucitevreni-iii-caffeine-xyz-app-ads-txt-and-accessible-to-google-admob-for-publisher-verification",
+      "featureTitle": "Create the file `frontend/public/app-ads.txt` with the content `google.com, pub-7936595519986908, DIRECT, f08c47fec0942fa0` so that it is served at the root URL path (e.g., `https://mucitevreni-iii.caffeine.xyz/app-ads.txt`) and accessible to Google AdMob for publisher verification.",
+      "files": [
+        "frontend/public/app-ads.txt"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "camera@1.0.0",
+        "authorization@3.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "http-outcalls@3.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-27T21:02:05.444Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-2",
+        "summary": "Create the file `frontend/public/app-ads.txt` with the content `google.com, pub-7936595519986908, DIRECT, f08c47fec0942fa0` so that it is served at the root URL path (e.g., `https://mucitevreni-iii.caffeine.xyz/app-ads.txt`) and accessible to Google AdMob for publisher verification.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/app-ads.txt"
+        ],
+        "matchedFiles": [
+          "frontend/public/app-ads.txt"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/app-ads.txt",
+    "frontend/src/config.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add app-ads.txt to frontend public folder for Google AdMob verification",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "summary": "Create app-ads.txt file in frontend/public for Google AdMob publisher verification",
+      "acceptanceCriteria": [
+        "The file `frontend/public/app-ads.txt` exists in the project.",
+        "The file contains exactly one line: `google.com, pub-7936595519986908, DIRECT, f08c47fec0942fa0`",
+        "The file is accessible at `https://mucitevreni-iii.caffeine.xyz/app-ads.txt` after deployment.",
+        "No other files are modified as part of this change."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/app-ads.txt",
+          "operation": "create",
+          "description": "Create app-ads.txt file containing the Google AdMob publisher verification line: `google.com, pub-7936595519986908, DIRECT, f08c47fec0942fa0`. This file will be served as a static asset at the root URL path for AdMob verification."
+        }
+      ]
+    }
+  ]
+}

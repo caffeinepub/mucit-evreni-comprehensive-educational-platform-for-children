@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "New project",
+  "architectural_notes": [
+    "Çok dilli destek (i18n) yalnızca üst bar ile sınırlı kalmayacak; tüm UI metinleri i18n anahtarları üzerinden yönetilecek."
+  ],
+  "known_issues": [
+    "Otomatik uygulama oluşturma/build adımı, kapsamlı i18n dönüşümü ve/veya öğrenci numarası yanına kopyala butonu ekleme denemelerinde başarısız olabiliyor (generation/build error)."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-in-the-student-profile-profile-settings-screen-add-a-copy-to-clipboard-control-next-to-the-displayed-student-number-so-the-user-can-copy-the-raw-unformatted-student-number-to-the-system-clipboard",
+      "title": "In the Student Profile / Profile Settings screen, add a copy-to-clipboard control next to the displayed student number so the user can copy the raw (unformatted) student number to the system clipboard.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-file-frontend-public-app-ads-txt-with-the-content-google-com-pub-7936595519986908-direct-f08c47fec0942fa0-so-that-it-is-served-at-the-root-url-path-e-g-https-mucitevreni-iii-caffeine-xyz-app-ads-txt-and-accessible-to-google-admob-for-publisher-verification",
+      "title": "Create the file `frontend/public/app-ads.txt` with the content `google.com, pub-7936595519986908, DIRECT, f08c47fec0942fa0` so that it is served at the root URL path (e.g., `https://mucitevreni-iii.caffeine.xyz/app-ads.txt`) and accessible to Google AdMob for publisher verification.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Dil değiştiğinde sadece üst bar değil, tüm UI metinleri seçilen dile geçsin (tam kapsamlı i18n).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Öğrenci profilinde öğrenci numarasının yanında 'kopyala' (ikon/buton) ile panoya kopyalama özelliği eklensin.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "app-ads.txt dosyası uygulamanın public klasörüne eklensin (Google AdMob doğrulaması için).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Add copy-to-clipboard button for Student Number in Student Profile",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
